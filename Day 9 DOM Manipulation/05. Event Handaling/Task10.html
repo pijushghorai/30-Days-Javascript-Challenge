@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .friend_list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 25px;
+        width: 100%;
+        gap: 12px;
+        background-color: green;
+        color: white;
+        margin-top: 100px;
+      }
+
+      .friend_list .friend {
+        border-bottom: 2px solid white;
+        padding-bottom: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chhota Bheem and Friends</h1>
+      <img src="https://www.greengold.tv/assets/show/chhota-bheem.jpg" alt="" />
+      <div class="friend_list">
+        <h4 class="friend">Chhota Bheem</h4>
+        <h4 class="friend">Chutki</h4>
+        <h4 class="friend">Raju</h4>
+        <h4 class="friend">Jaggu</h4>
+        <h4 class="friend">Kalia</h4>
+        <h4 class="friend">Indumati</h4>
+        <h4 class="friend">Dholu and Bholu</h4>
+        <h4 class="friend">Tun Tun Mausi</h4>
+      </div>
+    </div>
+  </body>
+  <script>
+    const friendList = document.querySelectorAll(".friend");
+    friendList.forEach((friends) => {
+      friends.addEventListener("mouseover", function (event) {
+        event.target.style.borderColor = "orange";
+      });
+
+      friends.addEventListener("mouseout", function (event) {
+        event.target.style.borderColor = "";
+      });
+    });
+  </script>
+</html>

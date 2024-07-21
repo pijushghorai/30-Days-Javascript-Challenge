@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .msg {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .msg button {
+        padding: 12px 30px;
+        background-color: hotpink;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="msg">
+      <h1 class="msgtext">Vai aj omlate nahi banaunga, Tahelka omlate banaunga</h1>
+      <button>Click Me</button>
+    </div>
+  </body>
+  <script>
+    const button = document.querySelector('button');
+    button.addEventListener('click', function () {
+        document.querySelector('.msgtext').textContent = 'Yehh leyy! Bahen ka lo**da Yehh leyy🙂'
+    })
+  </script>
+</html>
