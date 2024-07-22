@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Image Visibility</title>
+  </head>
+  <body>
+    <center>
+      <img
+        id="myImage"
+        src="https://images.pexels.com/photos/26775381/pexels-photo-26775381/free-photo-of-black-and-white-photograph-of-sand-dunes-in-the-desert.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Sample Image"
+        style="width: 300px; height: 200px"
+      />
+    </center>
+    <script>
+      const image = document.getElementById("myImage");
+
+      image.addEventListener("dblclick", () => {
+        if (image.style.display === "none") {
+          image.style.display = "block";
+        } else {
+          image.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

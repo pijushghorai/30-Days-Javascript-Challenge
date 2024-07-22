@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parentElement">
+      <button id="addButton">Add Item</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("parentElement")
+        .addEventListener("click", function (event) {
+          if (event.target && event.target.classList.contains("child")) {
+            console.log(event.target.textContent);
+          }
+        });
+
+      document
+        .getElementById("addButton")
+        .addEventListener("click", function () {
+          const newChild = document.createElement("div");
+          newChild.classList.add("child");
+          newChild.textContent = "New Item";
+          document.getElementById("parentElement").appendChild(newChild);
+        });
+    </script>
+  </body>
+</html>
