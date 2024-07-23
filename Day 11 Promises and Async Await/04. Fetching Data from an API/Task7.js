@@ -1,0 +1,10 @@
+async function publicApiData() {
+  try {
+    const responce = await fetch("https://jsonplaceholder.typicode.com/posts/");
+    const data = await responce.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+publicApiData();
