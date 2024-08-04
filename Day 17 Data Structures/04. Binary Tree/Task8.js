@@ -7,7 +7,7 @@ class TreeNode {
     this.right = right;
   }
 }
-
+  
 class BinaryTree {
   constructor() {
     this.root = null;
